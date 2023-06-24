@@ -104,7 +104,7 @@ from preprocess import rename_inclassable
 def sunburst(df, mode):
     df=rename_inclassable(df)
     df['langue_new'] = df['langue'].str.lower().map({'fr': 'fr', 'en': 'en'}).fillna('autres langues')
-    language_map = {"fr": "français", "en": "anglais", "les autres": "autres langues"}
+    language_map = {"fr": "français", "en": "anglais", "autres langues": "autres langues"}
     df['langue_new'] = df['langue_new'].map(language_map)
     # df = df[~df['domaine'].isin(['inclassable'])]
     # df = df[~df['langue_new'].isin(['les autres'])]
@@ -232,6 +232,6 @@ def sunburst(df, mode):
                           )
         fig.update_traces(
             hovertemplate=get_hover_sunburst_chart_univ(),
-            leaf=dict(opacity=1)
+            leaf=dict(opacity=1),
         )
     return fig
