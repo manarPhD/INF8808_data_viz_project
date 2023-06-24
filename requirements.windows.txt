@@ -41,21 +41,21 @@ numpy
     # via
     #   -r requirements.windows.in
     #   pandas
-pandas==1.5.1
+pandas
     # via -r requirements.windows.in
-plotly==5.11.0
+plotly
     # via
     #   -r requirements.windows.in
     #   dash
-python-dateutil==2.8.2
+python-dateutil
     # via pandas
-pytz==2022.6
+pytz
     # via pandas
-six==1.16.0
+six
     # via python-dateutil
-tenacity==8.1.0
+tenacity
     # via plotly
-werkzeug==2.2.2
+werkzeug
     # via flask
-zipp==3.10.0
+zipp
     # via importlib-metadata
